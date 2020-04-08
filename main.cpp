@@ -1,3 +1,13 @@
+/*
+The idea in general is to get the MST for each child, so if the ith edge (after sorting the edges according to their wieght)
+dosn't create a cycle in the first child's tree, we give it to him, else, we move to the next child, if the next child can't
+take it we give it to the next one and so on.
+this solution takes O(k*m) time, so it's not ideal at all.
+we can notice that if the ith edge creates a cycle for the j+1 child, then it will surely create a cycle for the j child, so we 
+can determine for each edge which son will take it using binary search.
+the solution is now O(m * log(k) ) and takes k*n memory, which is perfectly fine.
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 const int N=1e3+3;
