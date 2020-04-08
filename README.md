@@ -1,0 +1,1 @@
+# JOISC-15-inheritance
